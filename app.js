@@ -9,6 +9,9 @@ const DATA_FILE = path.join(__dirname, 'courses.json');
 // Middleware to parse JSON bodies from incoming requests
 app.use(express.json());
 
+// Serve static files (including index.html)
+app.use(express.static(__dirname));
+
 // --- HELPER FUNCTIONS ---
 
 // Read courses from the JSON file
