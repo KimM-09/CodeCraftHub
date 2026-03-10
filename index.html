@@ -578,7 +578,7 @@
                         <button class="btn btn-success" onclick="openEditModal(${course.id})">
                             Edit
                         </button>
-                        <button class="btn btn-danger" onclick="deleteCourse(${course.id})">
+                        <button class="btn btn-danger" onclick="handleDelete(${course.id})">
                             Remove
                         </button>
                     </div>
@@ -718,7 +718,7 @@
             }
         });
 
-        async function deleteCourse(courseId) {
+        async function handleDelete(courseId) {
             if (!confirm('Are you sure you want to delete this course? This action cannot be undone.')) {
                 return;
             }
